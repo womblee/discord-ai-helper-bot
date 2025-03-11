@@ -1,0 +1,105 @@
+{
+  "general_modding": {
+    "modding_basics": "Never edit core game files like Data3.pak, Data0.pak, Data2.pak, or any DW_DLC** folders, as this will prevent online play.",
+    "game_files_explanation": {
+      "Data0.pak": "Contains most game scripts and settings. Extract files from here for modding. To edit files, create a custom datapak and move the files there with the same folder structure. Load your custom pak with an online loader.",
+      "Data2.pak": "Contains map files and translation files, editable with a BIN editor.",
+      "Data3.pak": "Does not contain anything, used only for loading mods in single-player. Online loading methods are better than Data3.pak.",
+      "DW_folder": "Contains .rpack files for animations, models, and other game assets.",
+      "sound_files": "CSB files are archives containing FSB files, which hold in-game sounds."
+    },
+    "online_modding": {
+      "dide_mod": "dide_mod is a utility that allows you to load mods (custom datapaks) into multiplayer. Is a little bit complicated since you need to manually configure it. To install, place dide_mod.ini and dsound.dll in the game directory, then specify paths to custom datapaks in dide_mod.ini.",
+      "dlml": "DLML is also a utility like dide_mod that allows you to load custom datapaks into multiplayer. Similar to dide_mod, but uses a 'CustomPaks' folder to load datapaks inside of it, instead of manual configuration like in the dide_mod method.",
+      "alternative_methods": "Replacing language files like DataEn.pak or DataRu.pak can work, but may cause conflicts. Best used on MacOS/Linux."
+    },
+    "recommended_platform": "The modding Discord server recommends Windows for modding."
+  },
+  "modding_tools": {
+    "automatic_mod_installer": "Installs/uninstalls mods from the Nest Rusher Discord server.",
+    "backpack_editor": "Cheat Engine table for modifying weapon stats. May need multiple activation attempts.",
+    "bin_editor": "Converts .bin files to .txt for text editing. Be careful; even small text changes can break the game.",
+    "developer_menu_classic": "The original classic Developer Menu with a design menu made by Wahkah.",
+    "developer_menu_new": "A redesigned version of the Developer Menu with the same backend as the classic one but a different UI. Some features may not work as they were disabled by developers.",
+    "dlc_unlocker": "Unlocks DLC content (single-player only). If the game lacks DLC files, it won’t work. Made by pointfeev.",
+    "fps_boost": "Drastically reduces graphics quality for higher FPS.",
+    "frame_limiter": "Used in PVP to freeze animations and reduce damage.",
+    "save_editor": "Converts .sav files into JSON for editing. Poor documentation; requires self-learning. Usage: 1. Create an 'Editor' folder on your C drive and place the Save Editor files there. 2. Drag your save file into the folder and run 'sample.bat' to generate a JSON file. 3. Edit the JSON file and run 'update.bat' to create a patched save file.",
+    "cream_installer": "A tool to unlock free DLCs for Dying Light and other games. Works on most platforms except GOG. Usage: 1. Download Cream Installer from the downloads channel on Discord. 2. Extract the .exe file using 7-Zip or WinRAR. 3. Run Cream Installer and select the games you want to unlock DLCs for. 4. Click 'Generate and Install'. If DLCs don't unlock, disable koaloader in the settings."
+  },
+  "popular_mods": {
+    "crash_item": "Forces other players to exit the game when dropped. Highly toxic and not recommended.",
+    "crossbow_aimbot": "Auto-aim for crossbows; requires a prior hit to lock-onto the Night Hunter.",
+    "pvp_cheating_suite": "A Cheat Engine table with various cheats for PVP gameplay.",
+    "hide_weapon_mods": "Hides visual weapon modifications/attachments from being visible.",
+    "hunter_dk_dfa": "PVP exploit allowing instant death from a dropkick.",
+    "pvp_mods": [
+      "nloginov's PVP Pack",
+      "nloginov's Save Collection",
+      "Satan Mods 2023 (overpowered, red-themed)"
+    ],
+    "unban_btz_weapons": "Unlocks BTZ weapons disabled in online play.",
+    "vehicles_on_old_town_slums": "Adds drivable vehicles in these areas. No documentation or support available."
+  },
+  "modding_faq": {
+    "game_crashing": "Likely using an outdated mod version.",
+    "mod_not_loading": "Incorrect installation; try reinstalling.",
+    "opening_datapak": "Use 7-Zip (https://www.7-zip.org/) to open it.",
+    "mod_configuration": "Edit the mod's datapak file manually using 7-Zip.",
+    "dide_mod_setup": "Follow this guide: https://nlog.us/pages/load_mods.html",
+    "changing_fov_video_settings": "See: https://pastebin.com/AnzLFDYL",
+    "reset_character_dev_menu": "No fix unless you have a backup save or force-quit immediately after reset.",
+    "dev_menu_features_not_working": "Some features were disabled by developers.",
+    "single_player_only_message": "Appears if core game files (Data0.pak, Data3.pak, etc.) are modified."
+  },
+  "additional_information": {
+    "custom_outfits": "If you're wondering how to create/get custom outfits, check out the video about it on nloginov's channel.",
+    "anticheat_status": "Dying Light has no active anti-cheat. The last VAC ban was in 2016.",
+    "item_dropping": "If a user asks about dropping weapons or in-game items, they should mod themselves.",
+    "nest_rushers_server": "Nest Rushers is a server for Dying Light modding on PC. Console players are not supported.",
+    "lossless_scaling": "We no longer provide Lossless Scaling downloads due to copyright strikes.",
+    "file_editing": "You can open text files (.txt, .ini) with Notepad++ / Sublime Text / Windows Notepad. You can open archives (.zip, .pak) with 7-Zip / WinRAR.",
+    "antivirus_alerts": "Some files in our mod collection might trigger antivirus alerts. These are false positives. All uploaded files are open-source or viewable, and we verify their safety. Users can inspect the files themselves if uncertain.",
+    "working_with_text_files": "Data0 is an archive containing text files regulating game mechanics, items, quests, and more. Open it with 7-Zip or WinRAR. Example files include data\\scripts\\inventory\\ for weapon parameters and data\\scripts\\ for scripts/mechanics settings.",
+    "editing_weapon_parameters": "To modify weapon stats, open Data0, navigate to data\\scripts\\inventory\\, and edit the appropriate file with Notepad++. Example parameters: Damage(250.0), Force(20.0), StaminaUsage(0.15).",
+    "custom_textures": {
+      "description": "Custom textures can be created and applied using Resorep. This requires tools like Photoshop, Intel Texture Works Plugin, and XNViewMP.",
+      "steps": [
+        "1. Install Resorep and required dependencies (Microsoft Visual C++, Java).",
+        "2. Use Resorep to extract original textures from the game.",
+        "3. Edit textures in Photoshop using the Intel Texture Works Plugin.",
+        "4. Save textures in .dds format with BC1 compression and mipmaps enabled.",
+        "5. Place edited textures in the 'modded' folder and launch the game."
+      ]
+    },
+    "download_instructions": "All necessary files, such as Cream Installer, Resorep, dsound.dll, and others, can be found in the 'downloads' channel on our Discord server. Visit the server and check the 'downloads' channel for the files you need."
+  },
+  "useful_links": {
+    "nloginov_website": "https://nlog.us/ - nloginov's website, the owner of Nest Rushers",
+    "mod_loading_guide": "https://nlog.us/pages/load_mods.html - Instruction on how to load mods in multiplayer in Dying Light",
+    "custom_textures_resorep": "https://nlog.us/ps/resorep_textures.html - Custom textures in Dying Light using Resorep.",
+    "downloads_page": "https://nlog.us/ps/downloads.html - All downloads from nloginov's website"
+  },
+  "faq_variations": {
+    "where_to_download_files": [
+      "Where can I download the necessary files?",
+      "Where do I get Cream Installer?",
+      "Where can I find dsound.dll and dide_mod.ini?",
+      "Where do I download Resorep?"
+    ],
+    "response": "All necessary files can be found in the 'downloads' channel on our Discord server. Visit the server and check the 'downloads' channel for the files you need."
+  },
+  "modding_security": {
+    "backup_guide": "Always create backups of your save files before modding. Store them in a separate folder or external drive.",
+    "virus_scanning": "Scan all downloaded mods with antivirus software before installation. Use tools like VirusTotal for additional verification.",
+    "mod_source_verification": "Only download mods from trusted sources like NexusMods or the Nest Rushers Discord server or other verified modding communities."
+  },
+  "advanced_modding": {
+    "multiplayer_compatibility": "All of the mods work on your client side only, in order for other people to have them, they must have the mods installed too on their system."
+  },
+  "troubleshooting": {
+    "black_screen_on_launch": "This usually occurs due to outdated/broken mods. Disable recently installed mods and test the game after each removal.",
+    "missing_textures": "If textures are missing, you probably have installed some FPS Booster mod which causes this.",
+    "performance_issues": "If the game runs slowly after modding, try reducing the number of active mods or using the FPS Boost tool."
+  }
+}
